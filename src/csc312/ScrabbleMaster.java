@@ -1,3 +1,4 @@
+package csc312;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -5,10 +6,6 @@ import java.io.InputStreamReader;
 import java.net.*;
 
 public class ScrabbleMaster {
-    //you must implement the function to retrieve the content of a specific URL at https://wordfinder-001.appspot.com/wordfinder
-    //
-    //be aware that at random  the  ResponseCode may be SC_INTERNAL_SERVER_ERROR  or SC_INTERNAL_SERVER_ERROR instead of SC_OK
-    //
 
     public Character getURL( String url) {
         // Get character
@@ -53,4 +50,5 @@ public class ScrabbleMaster {
         }
         return null;
     }
+
 }
