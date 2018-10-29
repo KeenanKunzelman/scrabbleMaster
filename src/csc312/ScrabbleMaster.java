@@ -20,7 +20,7 @@ public class ScrabbleMaster {
         return "https://wordfinder-001.appspot.com/wordfinder?game=" + game + "&pos=" + charColumn.get(column) + row;
     }
 
-    private static Character getURL(String url) {
+    static Character getURL(String url) {
         // Get character
         String inputLine;
         URL urlLook;
@@ -64,7 +64,7 @@ public class ScrabbleMaster {
         return null;
     }
 
-    private static ArrayList<String> setGrid(int gameNumber) {
+    static ArrayList<String> setGrid(int gameNumber) {
         ArrayList<String> arrWords = new ArrayList<>();
         StringBuilder wordRow = new StringBuilder();
         String url;
