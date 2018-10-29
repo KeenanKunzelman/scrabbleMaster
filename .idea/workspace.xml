@@ -4,7 +4,6 @@
     <list default="true" id="be1941d4-a489-43a1-a2cc-a89f005861b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/csc312/ScrabbleMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/csc312/ScrabbleMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/csc312/cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/csc312/Cell.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +16,12 @@
     <session id="-1461327198">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -36,12 +36,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3002" />
+          <entry key="java" value="3289" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3002" />
+          <entry key="JAVA" value="3289" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -55,13 +55,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/csc312/ScrabbleMaster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
+            <state relative-caret-position="107">
+              <caret line="166" column="8" lean-forward="true" selection-start-line="166" selection-start-column="8" selection-end-line="166" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#setURLGrid#0;class#ScrabbleMaster#0" />
                 <element signature="method#getURL#0;class#ScrabbleMaster#0" />
-                <element signature="method#getWords#0;class#ScrabbleMaster#0" />
+                <element signature="method#findWord#0;class#ScrabbleMaster#0" />
               </folding>
             </state>
           </provider>
@@ -70,9 +69,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csc312/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state>
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
+                <element signature="e#344#345#0" expanded="true" />
                 <element signature="e#372#373#0" expanded="true" />
               </folding>
             </state>
@@ -151,7 +151,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540680859112" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540680918977" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -200,18 +200,19 @@
       <updated>1540495166721</updated>
       <workItem from="1540495172439" duration="7226000" />
       <workItem from="1540563942412" duration="2078000" />
-      <workItem from="1540669477996" duration="8732000" />
+      <workItem from="1540669477996" duration="8856000" />
+      <workItem from="1540769091668" duration="1949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18036000" />
+    <option name="totallyTimeSpent" value="20109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -220,12 +221,12 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.47026432" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47026432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32929516" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
@@ -254,10 +255,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="1971" selection-start-line="1971" selection-end-line="1971" />
-          <folding>
-            <element signature="e#77897#77898#0" expanded="true" />
-            <element signature="e#77969#77970#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -270,9 +267,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csc312/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state>
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           <folding>
+            <element signature="e#344#345#0" expanded="true" />
             <element signature="e#372#373#0" expanded="true" />
           </folding>
         </state>
@@ -280,13 +278,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csc312/ScrabbleMaster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
+        <state relative-caret-position="107">
+          <caret line="166" column="8" lean-forward="true" selection-start-line="166" selection-start-column="8" selection-end-line="166" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setURLGrid#0;class#ScrabbleMaster#0" />
             <element signature="method#getURL#0;class#ScrabbleMaster#0" />
-            <element signature="method#getWords#0;class#ScrabbleMaster#0" />
+            <element signature="method#findWord#0;class#ScrabbleMaster#0" />
           </folding>
         </state>
       </provider>

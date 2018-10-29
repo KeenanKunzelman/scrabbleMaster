@@ -90,7 +90,7 @@ public class ScrabbleMaster {
         return arrWords;
     }
 
-    private static ArrayList getWords(String url) {
+    private static ArrayList<String> getWords(String url) {
         // Get character
         String inputLine;
         URL urlLook;
@@ -139,10 +139,25 @@ public class ScrabbleMaster {
     private static void findWord(int game) {
         ArrayList<String> wordsToSearchFor = getWords("https://wordfinder-001.appspot.com/word.txt");
         ArrayList<String> wordsToSearchFrom = setGrid(game);
-        for (String x: wordsToSearchFor) {
-            for (String y: wordsToSearchFrom) {
-                if (y.contains(x)) {
-                    System.out.println("game: " + game + " word: " + x + " location: ");
+
+        HashMap<Integer, Character> alphaNumPosition = new HashMap<>();
+        alphaNumPosition.put(0, 'A');
+        alphaNumPosition.put(1, 'B');
+        alphaNumPosition.put(2, 'C');
+        alphaNumPosition.put(3, 'D');
+        alphaNumPosition.put(4, 'E');
+
+        for (int i = 0; i < wordsToSearchFor.size(); i++) {
+            for (int j = 0; j < wordsToSearchFrom.size(); j++) {
+                if (wordsToSearchFrom.get(j).contains(wordsToSearchFor.get(i))) {
+
+                    int idx = wordsToSearchFrom.get(j).indexOf(wordsToSearchFor.get(i));
+                    if (j > 4) {
+                        System.out.println("game: " + game + " word: " + wordsToSearchFor.get(i) + " location: " + alphaNumPosition.get(j - 5) + idx + " : " + alphaNumPosition.get(j - 5) + (idx + 2));
+                    }
+                    else {
+                        System.out.println("game: " + game + " word: " + wordsToSearchFor.get(i) + " location: " + alphaNumPosition.get(idx) + j + " : " + alphaNumPosition.get(idx + 2) + j);
+                    }
                 }
             }
         }
@@ -152,6 +167,5 @@ public class ScrabbleMaster {
         findWord(1);
         findWord(2);
         findWord(3);
-
     }
 }
