@@ -9,6 +9,13 @@ import java.util.HashMap;
 
 public class ScrabbleMaster {
 
+    /**
+     *
+     * @param game number of the game to play, i.e. game 1, 2 or 3
+     * @param column column number from 1 to 5
+     * @param row row number from 1 to 5
+     * @return a url where a character is at
+     */
     private static String setURLGrid(int game, int column, int row) {
         HashMap<Integer, Character> charColumn = new HashMap<>();
         charColumn.put(1, 'a');
@@ -152,11 +159,17 @@ public class ScrabbleMaster {
                 if (wordsToSearchFrom.get(j).contains(wordsToSearchFor.get(i))) {
 
                     int idx = wordsToSearchFrom.get(j).indexOf(wordsToSearchFor.get(i));
-                    if (j > 4) {
+                    /*if (j > 4) {
                         System.out.println("game: " + game + " word: " + wordsToSearchFor.get(i) + " location: " + alphaNumPosition.get(j - 5) + idx + " : " + alphaNumPosition.get(j - 5) + (idx + 2));
                     }
                     else {
                         System.out.println("game: " + game + " word: " + wordsToSearchFor.get(i) + " location: " + alphaNumPosition.get(idx) + j + " : " + alphaNumPosition.get(idx + 2) + j);
+                    }*/
+                    if (j <= 4) {
+                        System.out.println("game: " + game + " word: " + wordsToSearchFor.get(i) + " location: " + alphaNumPosition.get(j) + (idx+ 1) + " : " + alphaNumPosition.get(j) + (idx + 3));
+                    }
+                    else {
+                        System.out.println("game: " + game + " word: " + wordsToSearchFor.get(i) + " location: " + alphaNumPosition.get(idx) + (j - 4) + " : " + alphaNumPosition.get(idx + 2) + (j - 4));
                     }
                 }
             }
