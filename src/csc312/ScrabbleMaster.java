@@ -10,11 +10,10 @@ import java.util.HashMap;
 public class ScrabbleMaster {
 
     /**
-     *
-     * @param game number of the game to play, i.e. game 1, 2 or 3
+     * @param game number of the game to be played, i.e. game 1, 2 or 3
      * @param column column number from 1 to 5
      * @param row row number from 1 to 5
-     * @return a url where a character is at
+     * @return a url to get a character from
      */
     private static String setURLGrid(int game, int column, int row) {
         HashMap<Integer, Character> charColumn = new HashMap<>();
@@ -27,6 +26,11 @@ public class ScrabbleMaster {
         return "https://wordfinder-001.appspot.com/wordfinder?game=" + game + "&pos=" + charColumn.get(column) + row;
     }
 
+    /**
+     * Get character from url
+     * @param url url to get a letter from
+     * @return a single character (character in the grid)
+     */
     static Character getURL(String url) {
         // Get character
         String inputLine;
@@ -71,6 +75,11 @@ public class ScrabbleMaster {
         return null;
     }
 
+    /**
+     * Get letters from the grid and form strings
+     * @param gameNumber game to be played. i.e. game 1, 2 or 3
+     * @return An array list with 10 5-letter words
+     */
     static ArrayList<String> setGrid(int gameNumber) {
         ArrayList<String> arrWords = new ArrayList<>();
         StringBuilder wordRow = new StringBuilder();
@@ -97,6 +106,11 @@ public class ScrabbleMaster {
         return arrWords;
     }
 
+    /**
+     * Retrieve possible words from the server
+     * @param url url with all the possible 3 letter words
+     * @return An array list with all the 50 words extracted from the url
+     */
     private static ArrayList<String> getWords(String url) {
         // Get character
         String inputLine;
@@ -143,6 +157,10 @@ public class ScrabbleMaster {
         return null;
     }
 
+    /**
+     * Print the words found in the grid
+     * @param game game to be played. i.e. game 1, 2 or 3
+     */
     private static void findWord(int game) {
         ArrayList<String> wordsToSearchFor = getWords("https://wordfinder-001.appspot.com/word.txt");
         ArrayList<String> wordsToSearchFrom = setGrid(game);
